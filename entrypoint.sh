@@ -31,6 +31,10 @@ if [ -n "$IMMICH_ANALYZE_MODEL_NAME" ]; then
     args+=("--model-name" "$IMMICH_ANALYZE_MODEL_NAME")
 fi
 
+if [ -n "$IMMICH_ANALYZE_PROMPT" ]; then
+    args+=("--prompt" "$IMMICH_ANALYZE_PROMPT")
+fi
+
 if [ "${IMMICH_ANALYZE_IGNORE_EXISTING:-false}" = "true" ]; then
     args+=("--ignore-existing")
 fi
