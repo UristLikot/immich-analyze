@@ -112,16 +112,14 @@ nix run github:timasoft/immich-analyze --immich-root /path/to/immich/data --post
    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
    ```
 
-2. Clone and build the project:
+2. Install the project:
    ```bash
-   git clone https://github.com/timasoft/immich-analyze.git
-   cd immich-analyze
-   cargo build --release
+   cargo install immich-analyze
    ```
 
 3. Run the application:
    ```bash
-   ./target/release/immich-analyze --immich-root /path/to/immich/data --postgres-url "host=localhost user=your_postgres_user dbname=immich password=your_postgres_password" -c
+   immich-analyze --immich-root /path/to/immich/data --postgres-url "host=localhost user=your_postgres_user dbname=immich password=your_postgres_password" -c
    ```
 
 ## Configuration
